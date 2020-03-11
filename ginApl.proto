@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package ginApl;
+
+// The greeting service definition.
+service Grpc {
+  // Sends a greeting
+  rpc Send (GrpcRequest) returns (GrpcResponse) {}
+}
+
+// The request message containing the user's name.
+message GrpcRequest {
+  string query = 1;
+}
+
+// The response message containing the greetings
+message GrpcResponse {
+  string message = 1;
+}

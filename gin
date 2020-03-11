@@ -1,0 +1,12 @@
+#! /bin/sh
+
+case "$1" in
+  start)
+    go run /usr/local/ginApl/ginServer.go &
+    ;;
+  stop)
+    pgrep "ginServer" | xargs kill
+    ;;
+esac
+
+exit 0
